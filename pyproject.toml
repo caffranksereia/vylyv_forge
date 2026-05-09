@@ -1,8 +1,25 @@
 [project]
 name = "vylyv-forge"
 version = "0.1.0"
-description = "A Python project generator by Vylyv."
+description = "A fast Python project generator for basic, API, and SaaS projects."
+readme = "README.md"
 requires-python = ">=3.10"
+authors = [
+    { name = "mrx404", email = "mrxnulll@gmail.com" }
+]
+
+dependencies = [
+    "typer[all]",
+    "rich"
+]
 
 [project.scripts]
-vylyv = "vylyv.cli:main"
+vylyv-forge = "vylyv_forge.cli:main"
+forge = "vylyv_forge.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
