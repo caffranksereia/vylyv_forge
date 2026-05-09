@@ -5,20 +5,19 @@ description = "A fast Python project generator for basic, API, and SaaS projects
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
-    { name = "mrx404", email = "mrxnulll@gmail.com" }
+    { name = "Vylyv" }
 ]
-
 dependencies = [
-    "typer[all]",
+    "typer",
     "rich"
 ]
 
 [project.scripts]
-vylyv-forge = "vylyv_forge.cli:main"
 forge = "vylyv_forge.cli:main"
+vylyv-forge = "vylyv_forge.cli:main"
 
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
